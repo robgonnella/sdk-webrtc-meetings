@@ -4,12 +4,13 @@
 
 
 
-Document Version: 1.2.0
+Document Version: 1.3.0
 
-Document Date: 2018-07-13
+Document Date: 2019-02-21
 
 | Version | Date       | Who  | Description                                                  |
 | ------- | ---------- | ---- | ------------------------------------------------------------ |
+| 1.3.0   | 2/21/2019  | g1   | Update webrtc-sdk.js / webrtcsdk.min.js to support Chrome SDP change |
 | 1.2.0   | 7/13/2018  | g1   | Add contentVideoEl as an initialization parameter, Expose Roster and events. |
 | 1.1.0   | 3/26/2018  | g1   | Add ability to view Content Sharing                          |
 | 1.0.2   | 10/23/2017 | g1   | add reference network requirements for WebRTC                |
