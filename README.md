@@ -10,6 +10,7 @@ Document Date: 2019-02-21
 
 | Version | Date       | Who  | Description                                                  |
 | ------- | ---------- | ---- | ------------------------------------------------------------ |
+| 1.3.1   | 12/2/2019  | g1   | Update: remove optional requirement for Meeting Pool.  Make required that user's backend application schedules the meetings for the SDK to join.  Add note on disabling CORS for developers |
 | 1.3.0   | 2/21/2019  | g1   | Update webrtc-sdk.js / webrtcsdk.min.js to support Chrome SDP change |
 | 1.2.0   | 7/13/2018  | g1   | Add contentVideoEl as an initialization parameter, Expose Roster and events. |
 | 1.1.0   | 3/26/2018  | g1   | Add ability to view Content Sharing                          |
@@ -68,8 +69,7 @@ Additionally, these business conditions must be in place in order for your custo
 | Business Requirement     | Condition | Description                              |
 | ------------------------ | --------- | ---------------------------------------- |
 | Domain whitelisting      | Req'd     | BlueJeans must add your hosting website to its domain whitelist for WebRTC calls.  The standard for Web Security (CORS) requires this whitelisting.  Contact [BlueJeans support](mailto:Support@bluejeans.com) when ready to be added to the whitelist. |
-| Preassigned Meeting Pool | Opt'l     | BlueJeans allocates a finite pool of meetings that your web page connects for video sessions |
-| Meetings API Scheduling   | Opt'l     | Hosting web site makes backend API calls utilizing BlueJeans Meetings API’s to schedule meetings. |
+| Meetings API Scheduling   | Req'd | Hosting web site (API's) or BlueJeans.com (User Portal) must schedule the BlueJeans Meetings. |
 <br />
 <br />
 <br />
@@ -102,6 +102,9 @@ BlueJeans *recommends* creating a folder structure on your web host similar to w
 
 ![Project Structure](media/files.png)
 <br />
+### Working Around Whitelisting When Developing
+Your developers can test their changes from a non-whitelisted host by using *browser extensions* that *disable the CORS requirement* in their browser.  Then, when ready to deploy, the host web server will need to be whitelisted at BlueJeans.
+
 <br />
 <br />
 <br />
